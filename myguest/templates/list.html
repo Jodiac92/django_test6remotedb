@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+** 글 목록 ** <br>
+<a href="/guest/insert">자료 추가</a>
+<table border="1">
+	<tr><th>아이디</th><th>제 목</th><th>내 용</th><th>등록일</th></tr>
+	{% for g in gdata %}
+	<tr>
+		<td>{{g.id}}</td>
+		<td>{{g.title}}</td>
+		<td>{{g.content}}</td>
+		<td>{{g.regdata}}</td>
+	</tr>
+	{% endfor %}
+</table>
+</body>
+</html>
